@@ -1287,7 +1287,7 @@ GLOBAL_DATUM_INIT(dummySave, /savefile, new("tmp/dummySave.sav")) //Cache of ico
 	var/image/img = image(file, person, state)
 	img.plane = plane //Thanks Byond.
 	img.layer = MOB_LAYER-0.2
-	img.appearance_flags = APPEARANCE_UI
+	img.appearance_flags = APPEARANCE_UI | KEEP_APART
 	return img
 
 /**
