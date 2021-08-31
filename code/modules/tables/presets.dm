@@ -54,6 +54,11 @@
 	icon_state = "plain_preview"
 	color = "#824B28"
 
+/obj/structure/table/woodentable/classic
+	icon = 'icons/crescent13/obj/tables.dmi'
+	icon_state = "classicwood"
+	color = null
+
 /obj/structure/table/woodentable/Initialize(mapload)
 	material = get_material_by_name("wood")
 	return ..()

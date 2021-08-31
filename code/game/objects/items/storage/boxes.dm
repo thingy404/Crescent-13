@@ -327,6 +327,18 @@
 		/obj/item/bug_monitor
 	)
 
+/obj/item/storage/box/fish_basket
+	name = "fish basket"
+	desc = "A fish basket. Can hold fish. Likely contains fish. Made for fish. Perhaps by fish?"
+	icon = 'icons/crescent13/obj/storage.dmi'
+	icon_state = "produce_basket"
+	item_state = null
+	foldable = null
+	max_w_class = ITEMSIZE_SMALL
+	max_storage_space = INVENTORY_BOX_SPACE
+	drop_sound = 'sound/items/drop/cardboardbox.ogg'
+	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
+
 /obj/item/storage/box/rxglasses
 	name = "box of prescription glasses"
 	desc = "This box contains nerd glasses."
