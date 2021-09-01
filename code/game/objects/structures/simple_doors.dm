@@ -96,7 +96,7 @@
 
 /obj/structure/simple_door/proc/Open()
 	isSwitchingStates = 1
-	playsound(loc, material.dooropen_noise, 100, 1)
+	playsound(loc, material.dooropen_noise, 70)
 	flick("[material.door_icon_base]opening",src)
 	sleep(10)
 	density = 0
@@ -108,7 +108,7 @@
 
 /obj/structure/simple_door/proc/Close()
 	isSwitchingStates = 1
-	playsound(loc, material.dooropen_noise, 100, 1)
+	playsound(loc, material.doorclose_noise, 70)
 	flick("[material.door_icon_base]closing",src)
 	sleep(10)
 	density = 1
@@ -137,10 +137,8 @@
 		visible_message("<span class='danger'>[user] hits [src] with [W]!</span>")
 		if(material == get_material_by_name("resin"))
 			playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
-		else if(material == (get_material_by_name(MAT_WOOD) || get_material_by_name(MAT_SIFWOOD)))
-			playsound(loc, 'sound/effects/woodcutting.ogg', 100, 1)
 		else
-			playsound(src, 'sound/weapons/smash.ogg', 50, 1)
+			playsound(loc, "wooddoordamage", 70, 0)
 		CheckHardness()
 	else if(istype(W,/obj/item/weldingtool))
 		var/obj/item/weldingtool/WT = W
@@ -162,10 +160,8 @@
 	visible_message("<span class='danger'>[user] [attack_verb] the [src]!</span>")
 	if(material == get_material_by_name("resin"))
 		playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
-	else if(material == (get_material_by_name(MAT_WOOD) || get_material_by_name(MAT_SIFWOOD)))
-		playsound(loc, 'sound/effects/woodcutting.ogg', 100, 1)
 	else
-		playsound(src, 'sound/weapons/smash.ogg', 50, 1)
+		playsound(src, "wooddoordamage", 70, 0)
 	user.do_attack_animation(src)
 	hardness -= damage/10
 	CheckHardness()
@@ -176,7 +172,8 @@
 
 /obj/structure/simple_door/proc/Dismantle(devastated = 0)
 	material.place_dismantled_product(get_turf(src))
-	visible_message("<span class='danger'>The [src] is destroyed!</span>")
+	visible_message("<span class='danger'>Collapsing, [src] is destroyed!</span>")
+	playsound(loc, 'sound/effects/doorbreak.ogg', 70, 0)
 	qdel(src)
 
 /obj/structure/simple_door/ex_act(severity = 1)
@@ -220,14 +217,47 @@
 /obj/structure/simple_door/diamond/Initialize(mapload, material_name)
 	return ..(mapload, "diamond")
 
+/obj/structure/simple_door/wood
+	icon_state = "wood"
+
 /obj/structure/simple_door/wood/Initialize(mapload, material_name)
-	return ..(mapload, MAT_WOOD)
+	return ..(mapload, MAT_WOODDOOR)
+
+/obj/structure/simple_door/woodred
+	icon_state = "woodred"
+
+/obj/structure/simple_door/woodred/Initialize(mapload, material_name)
+	return ..(mapload, MAT_WOODDOORRED)
+
+/obj/structure/simple_door/woodblue
+	icon_state = "woodblue"
+
+/obj/structure/simple_door/framed/Initialize(mapload, material_name)
+	return ..(mapload, MAT_WOODDOORFRAMED)
+
+/obj/structure/simple_door/framed
+	icon_state = "framed"
+
+/obj/structure/simple_door/framed2/Initialize(mapload, material_name)
+	return ..(mapload, MAT_WOODDOORFRAMED2)
+
+/obj/structure/simple_door/framed2
+	icon_state = "doubleframed"
+
+/obj/structure/simple_door/woodblue/Initialize(mapload, material_name)
+	return ..(mapload, MAT_WOODDOORBLUE)
 
 /obj/structure/simple_door/sifwood/Initialize(mapload, material_name)
 	return ..(mapload, MAT_SIFWOOD)
 
 /obj/structure/simple_door/resin/Initialize(mapload, material_name)
 	return ..(mapload, "resin")
+
+/obj/structure/simple_door/cave
+	icon_state = "cave"
+
+/obj/structure/simple_door/cave/Initialize(mapload, material_name)
+	return ..(mapload, "cave")
 
 /obj/structure/simple_door/cult/Initialize(mapload, material_name)
 	return ..(mapload, "cult")

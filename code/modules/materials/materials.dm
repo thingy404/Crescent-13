@@ -130,6 +130,7 @@ var/list/name_to_material
 	var/tableslam_noise = 'sound/weapons/tablehit1.ogg'
 	// Noise made when a simple door made of this material opens or closes.
 	var/dooropen_noise = 'sound/effects/stonedoor_openclose.ogg'
+	var/doorclose_noise = 'sound/effects/stonedoor_openclose.ogg'
 	// Path to resulting stacktype. Todo remove need for this.
 	var/stack_type
 	// Wallrot crumble message.
@@ -829,6 +830,7 @@ var/list/name_to_material
 	icon_colour = "#35343a"
 	icon_base = "resin"
 	dooropen_noise = 'sound/effects/attackblob.ogg'
+	doorclose_noise = 'sound/effects/attackblob.ogg'
 	door_icon_base = "resin"
 	icon_reinf = "reinf_mesh"
 	melting_point = T0C+300
@@ -862,7 +864,7 @@ var/list/name_to_material
 	name = MAT_WOOD
 	stack_type = /obj/item/stack/material/wood
 	icon_colour = "#9c5930"
-	integrity = 50
+	integrity = 100
 	icon_base = "wood"
 	explosion_resistance = 2
 	shard_type = SHARD_SPLINTER
@@ -875,11 +877,40 @@ var/list/name_to_material
 	melting_point = T0C+300 //okay, not melting in this case, but hot enough to destroy wood
 	ignition_point = T0C+288
 	stack_origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 1)
-	dooropen_noise = 'sound/effects/doorcreaky.ogg'
+	dooropen_noise = "wooddooropen"
+	doorclose_noise = "wooddoorclose"
 	door_icon_base = "wood"
 	destruction_desc = "splinters"
 	sheet_singular_name = "plank"
 	sheet_plural_name = "planks"
+
+/*Door Subtypes*/
+
+/datum/material/wood/door
+	name = MAT_WOODDOOR
+	icon_colour = "#FFFFFF" //very cheap workaround
+
+/datum/material/wood/doorblue
+	name = MAT_WOODDOORBLUE
+	door_icon_base = "woodblue"
+	icon_colour = "#FFFFFF"
+
+/datum/material/wood/doorred
+	name = MAT_WOODDOORRED
+	door_icon_base = "woodred"
+	icon_colour = "#FFFFFF"
+
+/datum/material/wood/framed
+	name = MAT_WOODDOORFRAMED
+	door_icon_base = "framed"
+	icon_colour = "#FFFFFF"
+
+/datum/material/wood/framed2
+	name = MAT_WOODDOORFRAMED2
+	door_icon_base = "doubleframed"
+	icon_colour = "#FFFFFF"
+
+/*Door Subtypes*/
 
 /datum/material/wood/log
 	name = MAT_LOG
@@ -1023,6 +1054,7 @@ var/list/name_to_material
 	icon_colour = "#35343a"
 	icon_base = "flesh"
 	dooropen_noise = 'sound/effects/attackblob.ogg'
+	doorclose_noise = 'sound/effects/attackblob.ogg'
 	door_icon_base = "fleshclosed"
 	icon_reinf = "reinf_mesh"
 	melting_point = T0C+300
@@ -1040,6 +1072,39 @@ var/list/name_to_material
 	return 0
 
 /datum/material/flesh/wall_touch_special(var/turf/simulated/wall/W, var/mob/living/L)
+	var/mob/living/carbon/M = L
+	if(istype(M) && L.mind.isholy)
+		to_chat(M, "<span class = 'notice'>\The [W] shudders under your touch, starting to become porous.</span>")
+		playsound(W, 'sound/effects/attackblob.ogg', 50, 1)
+		if(do_after(L, 5 SECONDS))
+			spawn(2)
+				playsound(W, 'sound/effects/attackblob.ogg', 100, 1)
+				W.dismantle_wall()
+		return 1
+	return 0
+
+/datum/material/cave
+	name = "cave"
+	icon_colour = "#FFFFFF"
+	dooropen_noise = 'sound/effects/attackblob.ogg'
+	doorclose_noise = 'sound/effects/attackblob.ogg'
+	door_icon_base = "cave"
+	icon_reinf = "reinf_mesh"
+	melting_point = T0C+300
+	sheet_singular_name = "glob"
+	sheet_plural_name = "globs"
+	conductive = 0
+	explosion_resistance = 60
+	radiation_resistance = 10
+	stack_origin_tech = list(TECH_MATERIAL = 8, TECH_PHORON = 4, TECH_BLUESPACE = 4, TECH_BIO = 7)
+
+/datum/material/cave/can_open_material_door(var/mob/living/user)
+	var/mob/living/carbon/M = user
+	if(istype(M))
+		return 1
+	return 0
+
+/datum/material/cave/wall_touch_special(var/turf/simulated/wall/W, var/mob/living/L)
 	var/mob/living/carbon/M = L
 	if(istype(M) && L.mind.isholy)
 		to_chat(M, "<span class = 'notice'>\The [W] shudders under your touch, starting to become porous.</span>")
