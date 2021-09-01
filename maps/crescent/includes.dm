@@ -1,5 +1,8 @@
 
 	#include "turfs.dm"
 	#include "structures.dm"
+	#include "items.dm"
+	#include "decals.dm"
+	#include "areas.dm"
 
-	#include "../../_maps/map_files/dune/main-01-surface.dmm"
+	#include "../../_maps/map_files/crescent/main-01-surface.dmm"
