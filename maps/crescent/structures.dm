@@ -31,7 +31,7 @@
 	icon_state = "palisade"
 	health = 150
 	maxhealth = 150
-
+/*
 /obj/structure/bonfire/brazier
 	name = "brazier"
 	icon = 'icons/crescent13/obj/structures/structures.dmi'
@@ -56,7 +56,7 @@
 			I.layer = MOB_LAYER + 0.1
 			I.appearance_flags = RESET_COLOR
 			overlays += I
-
+*/
 //
 
 obj/structure/bookcase/mapped
