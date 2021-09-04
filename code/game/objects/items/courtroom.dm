@@ -18,9 +18,9 @@
 	w_class = 1
 
 /obj/item/gavelblock/attackby(obj/item/I, mob/user, params)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(istype(I, /obj/item/gavelhammer))
 		playsound(loc, 'sound/effects/gavel.ogg', 100, 1)
 		user.visible_message("<span class='warning'>[user] strikes \the [src] with \the [I].</span>")
-
 	else
 		return

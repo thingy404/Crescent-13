@@ -62,7 +62,15 @@
 			return TryToSwitchState(user)
 
 /obj/structure/simple_door/attack_hand(mob/user as mob)
-	return TryToSwitchState(user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(user.a_intent == INTENT_DISARM)
+		playsound(src.loc, "doorknock", 80, 0, 0)
+		visible_message("<span class='notice'>[user] knocks on the [src].</span>")
+	else if (user.a_intent == INTENT_HARM)
+		playsound(src.loc, "doorbang", 80, 0, 0)
+		visible_message("<span class='danger'>[user] hammers on the [src].</span>")
+	else
+		return TryToSwitchState(user)
 
 /obj/structure/simple_door/CanAllowThrough(atom/movable/mover, turf/target)
 	. = ..()
