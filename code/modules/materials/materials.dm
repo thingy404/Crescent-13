@@ -863,7 +863,7 @@ var/list/name_to_material
 /datum/material/wood
 	name = MAT_WOOD
 	stack_type = /obj/item/stack/material/wood
-	icon_colour = "#9c5930"
+	icon_colour = "#FFFFFF"
 	integrity = 100
 	icon_base = "wood"
 	explosion_resistance = 2
@@ -908,6 +908,21 @@ var/list/name_to_material
 /datum/material/wood/framed2
 	name = MAT_WOODDOORFRAMED2
 	door_icon_base = "doubleframed"
+	icon_colour = "#FFFFFF"
+
+/datum/material/wood/wall2
+	name = MAT_WOODWALL2
+	icon_base = "2wood"
+	icon_colour = "#FFFFFF"
+
+/datum/material/wood/wall3
+	name = MAT_WOODWALL3
+	icon_base = "3wood"
+	icon_colour = "#FFFFFF"
+
+/datum/material/wood/wall4
+	name = MAT_WOODWALL4
+	icon_base = "4wood"
 	icon_colour = "#FFFFFF"
 
 /*Door Subtypes*/

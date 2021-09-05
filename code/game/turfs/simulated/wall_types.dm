@@ -73,8 +73,33 @@
 /turf/simulated/wall/durasteel/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	return ..(mapload,"durasteel", "durasteel")
 
+/turf/simulated/wall/wood
+	icon = 'icons/turf/wall_masks.dmi'
+	icon_state = "woodmask1"
+
 /turf/simulated/wall/wood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	return ..(mapload, MAT_WOOD)
+
+/turf/simulated/wall/wood2
+	icon = 'icons/turf/wall_masks.dmi'
+	icon_state = "woodmask2"
+
+/turf/simulated/wall/wood2/Initialize(mapload, materialtype, rmaterialtype, girdertype)
+	return ..(mapload, MAT_WOODWALL2)
+
+/turf/simulated/wall/wood3
+	icon = 'icons/turf/wall_masks.dmi'
+	icon_state = "woodmask3"
+
+/turf/simulated/wall/wood3/Initialize(mapload, materialtype, rmaterialtype, girdertype)
+	return ..(mapload, MAT_WOODWALL3)
+
+/turf/simulated/wall/wood4
+	icon = 'icons/turf/wall_masks.dmi'
+	icon_state = "woodmask4"
+
+/turf/simulated/wall/wood4/Initialize(mapload, materialtype, rmaterialtype, girdertype)
+	return ..(mapload, MAT_WOODWALL4)
 
 /turf/simulated/wall/sifwood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	return ..(mapload, MAT_SIFWOOD)
