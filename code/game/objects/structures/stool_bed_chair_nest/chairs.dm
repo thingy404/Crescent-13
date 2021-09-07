@@ -383,3 +383,13 @@
 
 /obj/structure/bed/chair/sofa/orange/corner
 	icon_state = "sofacorner"
+
+/obj/structure/bed/chair/bleacher
+	icon = 'icons/crescent13/obj/bed_chair.dmi'
+	icon_state = "bleacher"
+
+/obj/structure/bed/chair/bleacher/left
+	icon_state = "bleacher_l"
+
+/obj/structure/bed/chair/bleacher/right
+	icon_state = "bleacher_r"
