@@ -383,3 +383,18 @@
 
 /obj/structure/bed/chair/sofa/orange/corner
 	icon_state = "sofacorner"
+
+/obj/structure/bed/chair/wood/bleacher
+	icon = 'icons/crescent13/obj/bed_chair.dmi'
+	icon_state = "bleacher"
+	base_icon = "bleacher"
+	name = "bleacher"
+	desc = "A wooden chair, but longer, invite your friends!"
+
+/obj/structure/bed/chair/wood/bleacher/left
+	icon_state = "bleacher_l"
+	base_icon = "bleacher_l"
+
+/obj/structure/bed/chair/wood/bleacher/right
+	icon_state = "bleacher_r"
+	base_icon = "bleacher_r"
