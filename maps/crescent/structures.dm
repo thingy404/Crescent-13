@@ -31,6 +31,22 @@
 	icon_state = "palisade"
 	health = 150
 	maxhealth = 150
+
+/obj/structure/barricade/wood_fence
+	name = "wooden fence"
+	desc = "Doesn't work much as defence."
+	icon = 'icons/crescent13/obj/structures/structures.dmi'
+	icon_state = "wood_fence4-8"
+	health = 100
+	maxhealth = 100
+
+/obj/structure/barricade/wood_fence_division
+	name = "wooden fence division"
+	desc = "Doesn't work much as defence."
+	icon = 'icons/crescent13/obj/structures/structures.dmi'
+	icon_state = "wood_fence_10"
+	health = 100
+	maxhealth = 100
 /*
 /obj/structure/bonfire/brazier
 	name = "brazier"
