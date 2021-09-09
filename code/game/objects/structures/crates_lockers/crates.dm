@@ -727,3 +727,35 @@
 
 /obj/structure/closet/crate/secure/zenghu
 	desc = "A secure sterile crate marked with the logo of Zeng-Hu Pharmaceuticals."
+
+/obj/structure/closet/crate/barrel
+	name = "wooden barrel"
+	desc = "A chonky container with possible loot, or just trash."
+	icon = 'icons/crescent13/obj/barrel.dmi'
+	icon_opened = "barrel_wood_open"
+	icon_closed = "barrel_wood"
+	icon_state = "barrel_wood"
+
+/obj/structure/closet/crate/wood
+	name = "wooden crate"
+	desc = "A crate made out of wood."
+	icon = 'icons/crescent13/obj/storage.dmi'
+	icon_opened = "wood_crate_opened"
+	icon_closed = "wood_crate"
+	icon_state = "wood_crate"
+
+/obj/structure/closet/crate/wood_chest
+	name = "wooden chest"
+	desc = "A more spacious and fancy wooden crate."
+	icon = 'icons/crescent13/obj/storage.dmi'
+	icon_opened = "wood_chest_opened"
+	icon_closed = "wood_chest"
+	icon_state = "wood_chest"
+
+/obj/structure/closet/crate/treasure
+	name = "tresure chest"
+	desc = "A royal wooden crate with golden trims. You feel compeled to open it."
+	icon = 'icons/crescent13/obj/storage.dmi'
+	icon_opened = "treasure_chest_opened"
+	icon_closed = "treasure_chest"
+	icon_state = "treasure_chest"

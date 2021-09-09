@@ -5,7 +5,7 @@
 /obj/item/storage/backpack
 	name = "backpack"
 	desc = "You wear this on your back and put items into it."
-	icon = 'icons/obj/clothing/backpack.dmi'
+	icon = 'icons/crescent13/obj/storage.dmi'
 	icon_state = "backpack"
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/mob/species/teshari/back.dmi',
