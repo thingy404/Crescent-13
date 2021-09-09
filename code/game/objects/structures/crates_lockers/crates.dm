@@ -478,7 +478,7 @@
 	emag = "largebinemag"
 
 
-
+/obj/structure/closet/crate/large
 	name = "large crate"
 	desc = "A hefty metal crate."
 	icon = 'icons/obj/storage.dmi'	//VOREStation Edit
