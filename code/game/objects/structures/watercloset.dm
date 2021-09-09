@@ -474,7 +474,8 @@
 	icon_state = "puddle"
 
 /obj/structure/sink/well
-	name = "Well"
+	name = "well"
 	desc = "Well, you take water out of it."
 	icon = 'icons/crescent13/obj/watercloset.dmi'
 	icon_state = "well_6"
+	density = 1

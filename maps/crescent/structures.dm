@@ -29,7 +29,6 @@
 	desc = "A tall palisade buit using tree logs. Prevents movement."
 	icon = 'icons/crescent13/obj/structures/structures.dmi'
 	icon_state = "palisade"
-	health = 150
 	maxhealth = 150
 
 /obj/structure/barricade/wood_fence
@@ -37,16 +36,92 @@
 	desc = "Doesn't work much as defence."
 	icon = 'icons/crescent13/obj/structures/structures.dmi'
 	icon_state = "wood_fence4-8"
-	health = 100
 	maxhealth = 100
 
-/obj/structure/barricade/wood_fence_division
+/obj/structure/barricade/wood_fence/division
 	name = "wooden fence division"
-	desc = "Doesn't work much as defence."
-	icon = 'icons/crescent13/obj/structures/structures.dmi'
 	icon_state = "wood_fence_10"
-	health = 100
-	maxhealth = 100
+
+/obj/structure/barricade/wood_fence/Initialize(mapload, material_name)
+	. = ..()
+	if(!material_name)
+		material_name = "wood"
+	material = get_material_by_name("[material_name]")
+	if(!material)
+		qdel(src)
+		return
+	name = "[material.display_name] fence"
+	desc = "Doesn't work much as defence. It is made out of [material.display_name]."
+	color = material.icon_colour
+	maxhealth = material.integrity
+	health = maxhealth
+
+/obj/structure/barricade/wood_fence/get_material()
+	return material
+
+/obj/structure/barricade/wood_fence/attackby(obj/item/W as obj, mob/user as mob)
+	user.setClickCooldown(user.get_attack_speed(W))
+	if(istype(W, /obj/item/stack))
+		var/obj/item/stack/D = W
+		if(D.get_material_name() != material.name)
+			return //hitting things with the wrong type of stack usually doesn't produce messages, and probably doesn't need to.
+		if(health < maxhealth)
+			if(D.get_amount() < 1)
+				to_chat(user, "<span class='warning'>You need one sheet of [material.display_name] to repair \the [src].</span>")
+				return
+			visible_message("<span class='notice'>[user] begins to repair \the [src].</span>")
+			if(do_after(user,20) && health < maxhealth)
+				if(D.use(1))
+					health = maxhealth
+					visible_message("<span class='notice'>[user] repairs \the [src].</span>")
+				return
+		return
+	else
+		switch(W.damtype)
+			if("fire")
+				health -= W.force * 1
+			if("brute")
+				health -= W.force * 0.75
+		if(material == (get_material_by_name(MAT_WOOD) || get_material_by_name(MAT_SIFWOOD)))
+			playsound(loc, 'sound/effects/woodcutting.ogg', 100, 1)
+		else
+			playsound(src, 'sound/weapons/smash.ogg', 50, 1)
+		CheckHealth()
+		..()
+
+
+/obj/structure/barricade/wood_fence/take_damage(var/damage)
+	health -= damage
+	CheckHealth()
+	return
+
+/obj/structure/barricade/wood_fence/attack_generic(var/mob/user, var/damage, var/attack_verb)
+	visible_message("<span class='danger'>[user] [attack_verb] the [src]!</span>")
+	if(material == get_material_by_name("resin"))
+		playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
+	else if(material == (get_material_by_name(MAT_WOOD) || get_material_by_name(MAT_SIFWOOD)))
+		playsound(loc, 'sound/effects/woodcutting.ogg', 100, 1)
+	else
+		playsound(src, 'sound/weapons/smash.ogg', 50, 1)
+	user.do_attack_animation(src)
+	health -= damage
+	CheckHealth()
+	return
+
+
+/obj/structure/barricade/wood_fence/ex_act(severity)
+	switch(severity)
+		if(1.0)
+			dismantle()
+		if(2.0)
+			health -= 25
+			CheckHealth()
+
+/obj/structure/barricade/wood_fence/CanAllowThrough(atom/movable/mover, turf/target)//So bullets will fly over and stuff.
+	. = ..()
+	if(istype(mover) && mover.checkpass(PASSTABLE))
+		return TRUE
+	return FALSE
 /*
 /obj/structure/bonfire/brazier
 	name = "brazier"
