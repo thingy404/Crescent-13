@@ -1,7 +1,7 @@
 /obj/structure/largecrate
 	name = "large crate"
 	desc = "A hefty wooden crate."
-	icon = 'icons/obj/storage.dmi'
+	icon = 'icons/crescent13/obj/storage.dmi'
 	icon_state = "densecrate"
 	density = 1
 	var/list/starts_with
@@ -45,7 +45,7 @@
 /obj/structure/largecrate/hoverpod
 	name = "\improper Hoverpod assembly crate"
 	desc = "It comes in a box for the fabricator's sake. Where does the wood come from? ... And why is it lighter?"
-	icon_state = "mulecrate"
+	icon_state = "densecrate"
 
 /obj/structure/largecrate/hoverpod/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.is_crowbar())
@@ -61,7 +61,7 @@
 /obj/structure/largecrate/vehicle
 	name = "vehicle crate"
 	desc = "It comes in a box for the consumer's sake. ..How is this lighter?"
-	icon_state = "vehiclecrate"
+	icon_state = "densecrate"
 
 /obj/structure/largecrate/vehicle/Initialize(mapload)
 	. = ..()
@@ -82,7 +82,7 @@
 	starts_with = list(/obj/structure/vehiclecage/quadtrailer)
 
 /obj/structure/largecrate/animal
-	icon_state = "lisacrate"	//VOREStation Edit
+	icon_state = "densecrate"	//VOREStation Edit
 
 /obj/structure/largecrate/animal/mulebot
 	name = "Mulebot crate"

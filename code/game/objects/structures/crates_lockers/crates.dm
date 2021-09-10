@@ -759,3 +759,19 @@
 	icon_opened = "treasure_chest_opened"
 	icon_closed = "treasure_chest"
 	icon_state = "treasure_chest"
+
+/obj/structure/closet/basket
+	name = "basked"
+	desc = "Normally carried by a little red riding hood."
+	icon = 'icons/crescent13/obj/storage.dmi'
+	icon_opened = "basked_opened"
+	icon_closed = "basked"
+	icon_state = "basked"
+
+/obj/structure/closet/crate/wood_large
+	name = "large wood crate"
+	desc = "A crate made out of larger wood."
+	icon = 'icons/crescent13/obj/storage.dmi'
+	icon_opened = "large_wood_crate_2_opened"
+	icon_closed = "large_wood_crate2"
+	icon_state = "large_wood_crate2"
