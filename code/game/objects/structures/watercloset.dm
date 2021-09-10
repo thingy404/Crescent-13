@@ -477,5 +477,12 @@
 	name = "well"
 	desc = "Well, you take water out of it."
 	icon = 'icons/crescent13/obj/watercloset.dmi'
-	icon_state = "well_6"
+	icon_state = "well1"
+	density = 1
+
+/obj/structure/sink/pump
+	name = "water pump"
+	desc = "A few good pumps and you'll get drinkable water flowing in no time."
+	icon = 'icons/crescent13/obj/watercloset.dmi'
+	icon_state = "pump_b"
 	density = 1
