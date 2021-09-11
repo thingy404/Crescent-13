@@ -94,13 +94,6 @@
 /turf/simulated/wall/wood3/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	return ..(mapload, MAT_WOODWALL3)
 
-/turf/simulated/wall/wood4
-	icon = 'icons/turf/wall_masks.dmi'
-	icon_state = "woodmask4"
-
-/turf/simulated/wall/wood4/Initialize(mapload, materialtype, rmaterialtype, girdertype)
-	return ..(mapload, MAT_WOODWALL4)
-
 /turf/simulated/wall/sifwood/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	return ..(mapload, MAT_SIFWOOD)
 

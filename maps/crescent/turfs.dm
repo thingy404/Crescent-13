@@ -57,10 +57,6 @@
 
 //
 
-/turf/simulated/floor/wood/classic
-	icon = 'icons/crescent13/turf/floor.dmi'
-	icon_state = "housewood"
-
 /turf/simulated/floor/castle
 	icon = 'icons/crescent13/turf/floor.dmi'
 	icon_state = "stone_bricks"

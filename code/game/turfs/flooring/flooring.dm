@@ -382,7 +382,7 @@ var/list/flooring_types
 
 /decl/flooring/wood
 	name = "wooden floor"
-	desc = "Polished redwood planks."
+	desc = "Polished oak boards."
 	icon = 'icons/turf/flooring/wood_vr.dmi'
 	icon_base = "wood"
 	has_damage_range = 6
@@ -397,12 +397,57 @@ var/list/flooring_types
 		'sound/effects/footstep/wood4.ogg',
 		'sound/effects/footstep/wood5.ogg'))
 
-/decl/flooring/wood/sif
-	name = "alien wooden floor"
-	desc = "Polished alien wood planks."
-	icon = 'icons/turf/flooring/wood.dmi'
-	icon_base = "sifwood"
-	build_type = /obj/item/stack/tile/wood/sif
+/decl/flooring/wood/wood2
+	icon_base = "wood2"
+
+/decl/flooring/wood/wood3
+	icon_base = "wood3"
+
+/decl/flooring/wood/wood4
+	icon_base = "wood4"
+
+/decl/flooring/stone
+	name = "stone floor"
+	desc = "Hard stone paving."
+	icon = 'icons/turf/flooring/stone.dmi'
+	icon_base = "main"
+	has_damage_range = 6
+	descriptor = "cobble"
+	flags = TURF_CAN_BREAK | TURF_IS_FRAGILE |TURF_ACID_IMMUNE|TURF_HAS_CORNERS|TURF_REMOVE_SHOVEL
+
+/decl/flooring/stone/one
+	icon_base = "extra"
+
+/decl/flooring/stone/two
+	icon_base = "extra1"
+
+/decl/flooring/stone/three
+	icon_base = "extra2"
+
+/decl/flooring/stone/four
+	icon_base = "extra3"
+
+/decl/flooring/stone/five
+	icon_base = "extra4"
+
+/decl/flooring/stone/cobblev
+	name = "cobble floor"
+	icon_base = "cobble_vertical"
+
+/decl/flooring/stone/cobbleh
+	name = "cobble floor"
+	icon_base = "cobble_horizontal"
+
+/decl/flooring/stone/cobbledv
+	name = "cobble floor"
+	icon_base = "cobble_vertical_dark"
+
+/decl/flooring/stone/cobbledh
+	name = "cobble floor"
+	icon_base = "cobble_horizontal_dark"
+
+/decl/flooring/stone/bricks
+	icon_base = "bricks"
 
 /decl/flooring/reinforced
 	name = "reinforced floor"
