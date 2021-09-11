@@ -75,18 +75,57 @@
 	break_tile()
 	return ..()
 
-/turf/simulated/floor/wood/sif
-	name = "alien wooden floor"
-	icon = 'icons/turf/flooring/wood.dmi'
-	icon_state = "sifwood"
-	initial_flooring = /decl/flooring/wood/sif
+/turf/simulated/floor/wood/wood2
+	icon_state = "wood2"
+	initial_flooring = /decl/flooring/wood/wood2
 
-/turf/simulated/floor/wood/sif/broken
-	icon_state = "sifwood_broken0" // This gets changed when spawned.
+/turf/simulated/floor/wood/wood3
+	icon_state = "wood3"
+	initial_flooring = /decl/flooring/wood/wood3
 
-/turf/simulated/floor/wood/sif/broken/Initialize(mapload)
-	break_tile()
-	return ..()
+/turf/simulated/floor/wood/wood4
+	icon_state = "wood4"
+	initial_flooring = /decl/flooring/wood/wood4
+
+/turf/simulated/floor/stone
+	name = "stone floor"
+	icon = 'icons/turf/flooring/stone.dmi'
+	icon_state = "main"
+	initial_flooring = /decl/flooring/stone
+
+/turf/simulated/floor/stone/New()
+	icon_state = pick("main","1","2","3","extra","extra1","extra2","extra3")
+	..()
+
+/turf/simulated/floor/stone
+	name = "stone floor"
+	icon = 'icons/turf/flooring/stone.dmi'
+	icon_state = "main"
+	initial_flooring = /decl/flooring/stone
+
+/turf/simulated/floor/stone/bricks
+	icon_state = "bricks"
+	initial_flooring = /decl/flooring/stone/bricks
+
+/turf/simulated/floor/stone/cobble_vertical
+	name = "cobble floor"
+	icon_state = "cobble_vertical"
+	initial_flooring = /decl/flooring/stone/cobblev
+
+/turf/simulated/floor/stone/cobble_horizontal
+	name = "cobble floor"
+	icon_state = "cobble_horizontal"
+	initial_flooring = /decl/flooring/stone/cobbleh
+
+/turf/simulated/floor/stone/cobble_dark_vertical
+	name = "cobble floor"
+	icon_state = "cobble_vertical_dark"
+	initial_flooring = /decl/flooring/stone/cobbledv
+
+/turf/simulated/floor/stone/cobble_dark_horizontal
+	name = "cobble floor"
+	icon_state = "cobble_horizontal_dark"
+	initial_flooring = /decl/flooring/stone/cobbledh
 
 /turf/simulated/floor/grass
 	name = "grass patch"
