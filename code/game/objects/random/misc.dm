@@ -318,6 +318,21 @@
 				prob(1);/obj/item/reagent_containers/food/snacks/meat/corgi,
 				prob(1);/obj/item/reagent_containers/food/snacks/xenomeat)
 
+/obj/random/meatinn
+	name = "random meat"
+	desc = "This is a random slab of good meat."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "meat"
+
+/obj/random/meatinn/item_to_spawn()
+	return pick(prob(50);/obj/item/reagent_containers/food/snacks/meat,
+				prob(8);/obj/item/reagent_containers/food/snacks/carpmeat/fish,
+				prob(10);/obj/item/reagent_containers/food/snacks/bearmeat,
+				prob(1);/obj/item/reagent_containers/food/snacks/meat/monkey,
+				prob(1);/obj/item/reagent_containers/food/snacks/meat/corgi,
+				prob(20);/obj/item/reagent_containers/food/snacks/meat/chicken,
+				prob(10);/obj/item/reagent_containers/food/snacks/meat/crab)
+
 /obj/random/material //Random materials for building stuff
 	name = "random material"
 	desc = "This is a random material."
