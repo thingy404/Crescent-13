@@ -228,28 +228,28 @@
 	icon_state = "vines-[rand(1, 4)]"
 
 /obj/structure/flora/ausbushes/crescent
-	icon = 'icons/crescent13/obj/structures/jungleflora.dmi'
+	icon = 'icons//obj/flora/jungleflora.dmi'
 
 /obj/structure/flora/ausbushes/crescent/busha
 	icon_state = "busha"
 
 /obj/structure/flora/ausbushes/crescent/busha/Initialize(mapload)
 	. = ..()
-	icon_state = "busha-[rand(1, 3)]"
+	icon_state = "busha[rand(1, 3)]"
 
 /obj/structure/flora/ausbushes/crescent/bushb
 	icon_state = "bushb"
 
 /obj/structure/flora/ausbushes/crescent/bushb/Initialize(mapload)
 	. = ..()
-	icon_state = "bushb-[rand(1, 3)]"
+	icon_state = "bushb[rand(1, 3)]"
 
 /obj/structure/flora/ausbushes/crescent/bushc
 	icon_state = "bushc"
 
 /obj/structure/flora/ausbushes/crescent/bushc/Initialize(mapload)
 	. = ..()
-	icon_state = "bushc-[rand(1, 3)]"
+	icon_state = "bushc[rand(1, 3)]"
 
 // Grass
 
@@ -258,14 +258,14 @@
 
 /obj/structure/flora/ausbushes/crescent/grassa/Initialize(mapload)
 	. = ..()
-	icon_state = "grassa-[rand(1, 5)]"
+	icon_state = "grassa[rand(1, 5)]"
 
 /obj/structure/flora/ausbushes/crescent/grassb
 	icon_state = "grassb"
 
 /obj/structure/flora/ausbushes/crescent/grassb/Initialize(mapload)
 	. = ..()
-	icon_state = "grassb-[rand(1, 5)]"
+	icon_state = "grassb[rand(1, 5)]"
 
 // Rocky rock
 
@@ -274,7 +274,7 @@
 
 /obj/structure/flora/ausbushes/crescent/rock/Initialize(mapload)
 	. = ..()
-	icon_state = "rock-[rand(1, 5)]"
+	icon_state = "rock[rand(1, 5)]"
 
 // Large flora
 
@@ -282,18 +282,18 @@
 	icon = 'icons/crescent13/obj/structures/largejungleflora.dmi'
 
 /obj/structure/flora/ausbushes/crescent/large/bush
-	icon_state = "bush"
+	icon_state = "bush1"
 
 /obj/structure/flora/ausbushes/crescent/large/bush/Initialize(mapload)
 	. = ..()
-	icon_state = "bush-[rand(1, 3)]"
+	icon_state = "bush[rand(1, 3)]"
 
 /obj/structure/flora/ausbushes/crescent/large/rock
-	icon_state = "rock"
+	icon_state = "rocks1"
 
 /obj/structure/flora/ausbushes/crescent/large/rock/Initialize(mapload)
 	. = ..()
-	icon_state = "rock-[rand(1, 3)]"
+	icon_state = "rocks[rand(1, 3)]"
 
 //potted plants credit: Flashkirby
 /obj/structure/flora/pottedplant
