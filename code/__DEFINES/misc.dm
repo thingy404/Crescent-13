@@ -181,6 +181,8 @@ Will print: "/mob/living/carbon/human/death" (you can optionally embed it in a s
 #define MAT_WOODWALL2		"grey wood"
 #define MAT_WOODWALL3		"dark wood"
 #define MAT_WOODWALL4		"brown wood"
+#define MAT_BRICKWALL1		"grey brick"
+#define MAT_BRICKWALL2		"brown brick"
 #define MAT_WOODDOOR		"wooden"
 #define MAT_WOODDOORRED 	"red wooden"
 #define MAT_WOODDOORBLUE	"blue wooden"

@@ -103,6 +103,20 @@
 /turf/simulated/wall/log_sif/Initialize(mapload, materialtype, rmaterialtype, girdertype)
 	return ..(mapload, MAT_SIFLOG)
 
+/turf/simulated/wall/brick
+	icon = 'icons/turf/wall_masks.dmi'
+	icon_state = "1brickmask"
+
+/turf/simulated/wall/brick/Initialize(mapload, materialtype, rmaterialtype, girdertype)
+	return ..(mapload, MAT_BRICKWALL1)
+
+/turf/simulated/wall/brick2
+	icon = 'icons/turf/wall_masks.dmi'
+	icon_state = "2brickmask"
+
+/turf/simulated/wall/brick2/Initialize(mapload, materialtype, rmaterialtype, girdertype)
+	return ..(mapload, MAT_BRICKWALL2)
+
 // Shuttle Walls
 /turf/simulated/shuttle/wall
 	name = "autojoin wall"
