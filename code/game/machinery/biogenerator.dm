@@ -149,7 +149,7 @@
 /obj/machinery/biogenerator/attack_hand(mob/user as mob)
 	interact(user)
 
-/obj/machinery/biogenerator/grown_bin/proc/activate()
+/obj/machinery/biogenerator/proc/activate()
 	if(usr.stat)
 		return
 	if(stat) //NOPOWER etc
@@ -178,7 +178,7 @@
 		menustat = "void"
 	return
 
-/obj/machinery/biogenerator/grown_bin/proc/create_product(var/item, var/cost)
+/obj/machinery/biogenerator/proc/create_product(var/item, var/cost)
 	cost = round(cost/build_eff)
 	if(cost > points)
 		menustat = "nopoints"
@@ -269,7 +269,7 @@
 	update_icon()
 	return 1
 
-/obj/machinery/biogenerator/grown_bin/Topic(href, href_list)
+/obj/machinery/biogenerator/Topic(href, href_list)
 	if(stat & BROKEN) return
 	if(usr.stat || usr.restrained()) return
 	if(!in_range(src, usr)) return
