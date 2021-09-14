@@ -1,8 +1,8 @@
 /obj/machinery/biogenerator
 	name = "biogenerator"
 	desc = "Converts plants into biomass, which can be used for fertilizer and sort-of-synthetic products."
-	icon = 'icons/obj/biogenerator.dmi'
-	icon_state = "biogen-stand"
+	icon = 'icons/crescent13/obj/rack.dmi'
+	icon_state = "seedbin-5"
 	density = 1
 	anchored = 1
 	circuit = /obj/item/circuitboard/biogenerator
@@ -32,11 +32,11 @@
 
 /obj/machinery/biogenerator/update_icon()
 	if(!beaker)
-		icon_state = "biogen-empty"
+		icon_state = "grownbin"
 	else if(!processing)
-		icon_state = "biogen-stand"
+		icon_state = "grownbin-5"
 	else
-		icon_state = "biogen-work"
+		icon_state = "grownbin-5"
 	return
 
 /obj/machinery/biogenerator/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -149,7 +149,7 @@
 /obj/machinery/biogenerator/attack_hand(mob/user as mob)
 	interact(user)
 
-/obj/machinery/biogenerator/proc/activate()
+/obj/machinery/biogenerator/grown_bin/proc/activate()
 	if(usr.stat)
 		return
 	if(stat) //NOPOWER etc
@@ -178,7 +178,7 @@
 		menustat = "void"
 	return
 
-/obj/machinery/biogenerator/proc/create_product(var/item, var/cost)
+/obj/machinery/biogenerator/grown_bin/proc/create_product(var/item, var/cost)
 	cost = round(cost/build_eff)
 	if(cost > points)
 		menustat = "nopoints"
@@ -269,7 +269,7 @@
 	update_icon()
 	return 1
 
-/obj/machinery/biogenerator/Topic(href, href_list)
+/obj/machinery/biogenerator/grown_bin/Topic(href, href_list)
 	if(stat & BROKEN) return
 	if(usr.stat || usr.restrained()) return
 	if(!in_range(src, usr)) return
