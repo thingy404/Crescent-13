@@ -122,8 +122,25 @@
 	if(istype(mover) && mover.checkpass(PASSTABLE))
 		return TRUE
 	return FALSE
-/*
-/obj/structure/bonfire/brazier
+
+/obj/machinery/seed_storage/garden/seed_bin
+	name = "seed bin"
+	desc = "A bin full of seeds!"
+	icon = 'icons/crescent13/obj/rack.dmi'
+	icon_state = "seedbin-5"
+	use_power = FALSE
+	idle_power_usage = 0
+
+/obj/machinery/biogenerator/grown_bin
+	name = "grown bin"
+	desc = "To create nutrients and other stuff out plants."
+	icon = 'icons/crescent13/obj/rack.dmi'
+	icon_state = "grownbin-5"
+	use_power = FALSE
+	idle_power_usage = 0
+
+
+/*/obj/structure/bonfire/brazier
 	name = "brazier"
 	icon = 'icons/crescent13/obj/structures/structures.dmi'
 	icon_state = "brazier0"

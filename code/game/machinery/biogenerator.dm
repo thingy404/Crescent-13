@@ -1,8 +1,8 @@
 /obj/machinery/biogenerator
 	name = "biogenerator"
 	desc = "Converts plants into biomass, which can be used for fertilizer and sort-of-synthetic products."
-	icon = 'icons/obj/biogenerator.dmi'
-	icon_state = "biogen-stand"
+	icon = 'icons/crescent13/obj/rack.dmi'
+	icon_state = "seedbin-5"
 	density = 1
 	anchored = 1
 	circuit = /obj/item/circuitboard/biogenerator
@@ -32,11 +32,11 @@
 
 /obj/machinery/biogenerator/update_icon()
 	if(!beaker)
-		icon_state = "biogen-empty"
+		icon_state = "grownbin"
 	else if(!processing)
-		icon_state = "biogen-stand"
+		icon_state = "grownbin-5"
 	else
-		icon_state = "biogen-work"
+		icon_state = "grownbin-5"
 	return
 
 /obj/machinery/biogenerator/attackby(var/obj/item/O as obj, var/mob/user as mob)
