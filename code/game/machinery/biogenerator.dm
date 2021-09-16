@@ -2,7 +2,7 @@
 	name = "biogenerator"
 	desc = "Converts plants into biomass, which can be used for fertilizer and sort-of-synthetic products."
 	icon = 'icons/crescent13/obj/rack.dmi'
-	icon_state = "seedbin-5"
+	icon_state = "grownbin-5"
 	density = 1
 	anchored = 1
 	circuit = /obj/item/circuitboard/biogenerator
