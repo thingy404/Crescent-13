@@ -90,10 +90,10 @@
 	return
 
 /obj/structure/bookcase/update_icon()
-	if(contents.len < 5)
+	if(contents.len < 15)
 		icon_state = "book-[contents.len]"
 	else
-		icon_state = "book-5"
+		icon_state = "book-15"
 
 
 
