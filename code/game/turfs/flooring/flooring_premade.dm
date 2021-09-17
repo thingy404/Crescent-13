@@ -87,6 +87,41 @@
 	icon_state = "wood4"
 	initial_flooring = /decl/flooring/wood/wood4
 
+/*Outdoor Variants*/
+
+/turf/simulated/floor/outdoors/wood
+	name = "wooden floor"
+	icon = 'icons/turf/flooring/wood_vr.dmi'
+	icon_state = "wood"
+	initial_flooring = /decl/flooring/wood
+
+/turf/simulated/floor/outdoors/wood/broken
+	icon_state = "wood_broken0" // This gets changed when spawned.
+
+/turf/simulated/floor/outdoors/wood/broken/Initialize(mapload)
+	break_tile()
+	return ..()
+
+/turf/simulated/floor/outdoors/wood/wood2
+	icon_state = "wood2"
+	initial_flooring = /decl/flooring/wood/wood2
+
+/turf/simulated/floor/outdoors/wood/wood3
+	icon_state = "wood3"
+	initial_flooring = /decl/flooring/wood/wood3
+
+/turf/simulated/floor/outdoors/wood/wood4
+	icon_state = "wood4"
+	initial_flooring = /decl/flooring/wood/wood4
+
+
+
+
+
+
+
+/*********************************************/
+
 /turf/simulated/floor/stone
 	name = "stone floor"
 	icon = 'icons/turf/flooring/stone.dmi'
@@ -126,6 +161,40 @@
 	name = "cobble floor"
 	icon_state = "cobble_horizontal_dark"
 	initial_flooring = /decl/flooring/stone/cobbledh
+
+/*Outdoor Variants*/
+
+/turf/simulated/floor/outdoors/rocks/stone
+	name = "stone floor"
+	icon = 'icons/turf/flooring/stone.dmi'
+	icon_state = "main"
+	initial_flooring = /decl/flooring/stone
+
+/turf/simulated/floor/outdoors/rocks/stone/bricks
+	icon_state = "bricks"
+	initial_flooring = /decl/flooring/stone/bricks
+
+/turf/simulated/floor/outdoors/rocks/stone/cobble_vertical
+	name = "cobble floor"
+	icon_state = "cobble_vertical"
+	initial_flooring = /decl/flooring/stone/cobblev
+
+/turf/simulated/floor/outdoors/rocks/stone/cobble_horizontal
+	name = "cobble floor"
+	icon_state = "cobble_horizontal"
+	initial_flooring = /decl/flooring/stone/cobbleh
+
+/turf/simulated/floor/outdoors/rocks/stone/cobble_dark_vertical
+	name = "cobble floor"
+	icon_state = "cobble_vertical_dark"
+	initial_flooring = /decl/flooring/stone/cobbledv
+
+/turf/simulated/floor/outdoors/rocks/stone/cobble_dark_horizontal
+	name = "cobble floor"
+	icon_state = "cobble_horizontal_dark"
+	initial_flooring = /decl/flooring/stone/cobbledh
+
+/*****************************************************/
 
 /turf/simulated/floor/grass
 	name = "grass patch"
@@ -415,6 +484,7 @@
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
 	var/list/crossed_dirs = list()
+	initial_flooring = /decl/flooring/snow
 
 /turf/simulated/floor/snow/snow2
 	name = "snow"

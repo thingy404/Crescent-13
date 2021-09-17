@@ -57,7 +57,7 @@ var/list/grass_types = list(
 		new grass_type(src)
 	. = ..()
 
-/turf/simulated/floor/outdoors/grass/forest
+/turf/simulated/floor/outdoors/grass/forest_old
 	name = "thick grass"
 	icon_state = "grass-dark"
 	grass_chance = 80
@@ -71,3 +71,41 @@ var/list/grass_types = list(
 	tree_chance = 10
 	grass_chance = 0
 
+/*Forest*/
+
+/turf/simulated/floor/outdoors/grass/forest
+	icon = 'icons/crescent13/turf/ground.dmi'
+	icon_state = "dirt"
+	initial_flooring = /decl/flooring/outdoors/grass/forest
+
+/turf/simulated/floor/outdoors/grass/forest/grass
+	icon_state = "grass1"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/grass
+
+/turf/simulated/floor/outdoors/grass/forest/grass_corner
+	icon_state = "grassdirt_corner"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/grass_corner
+
+/turf/simulated/floor/outdoors/grass/forest/grass_corner2
+	icon_state = "grassdirt_corner2"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/grass_corner2
+
+/turf/simulated/floor/outdoors/grass/forest/grass_edge
+	icon_state = "grassdirt_edge"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/grass_edge
+
+/turf/simulated/floor/outdoors/grass/forest/desert_dirt
+	icon_state = "desert_dirt"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/desert_dirt
+
+/turf/simulated/floor/outdoors/grass/forest/corner1
+	icon_state = "grasscorner1"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/corner1
+
+/turf/simulated/floor/outdoors/grass/forest/corner2
+	icon_state = "grasscorner2"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/corner2
+
+/turf/simulated/floor/outdoors/grass/forest/edge
+	icon_state = "grassedge"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/edge
