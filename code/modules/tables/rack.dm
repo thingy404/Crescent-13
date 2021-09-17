@@ -1,6 +1,6 @@
 /obj/structure/table/rack
 	name = "rack"
-	desc = "Different from the Middle Ages version."
+	desc = "A storage rack for holding equipment."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "rack"
 	can_plate = 0
@@ -24,6 +24,16 @@
 		color = material.icon_colour
 	return
 
-/obj/structure/table/rack/holorack/dismantle(obj/item/tool/wrench/W, mob/user)
-	to_chat(user, "<span class='warning'>You cannot dismantle \the [src].</span>")
-	return
+/obj/structure/table/rack/Initialize(mapload)
+	material = get_material_by_name("wood")
+	return ..()
+
+/obj/structure/table/rack/shelf
+	name = "shelving"
+	desc = "Firm shelving for storage."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "shelf"
+
+/obj/structure/table/rack/shelf/Initialize(mapload)
+	material = get_material_by_name("wood")
+	return ..()
