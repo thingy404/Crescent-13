@@ -94,6 +94,7 @@
 	icon = 'icons/turf/flooring/wood_vr.dmi'
 	icon_state = "wood"
 	initial_flooring = /decl/flooring/wood
+	edge_blending_priority = 0
 
 /turf/simulated/floor/outdoors/wood/broken
 	icon_state = "wood_broken0" // This gets changed when spawned.
@@ -169,6 +170,7 @@
 	icon = 'icons/turf/flooring/stone.dmi'
 	icon_state = "main"
 	initial_flooring = /decl/flooring/stone
+	edge_blending_priority = 0
 
 /turf/simulated/floor/outdoors/rocks/stone/bricks
 	icon_state = "bricks"
