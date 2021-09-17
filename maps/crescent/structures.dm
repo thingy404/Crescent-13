@@ -30,6 +30,7 @@
 	icon = 'icons/crescent13/obj/structures/structures.dmi'
 	icon_state = "palisade"
 	maxhealth = 150
+	opacity = 1
 
 /obj/structure/barricade/wood_fence
 	name = "wooden fence"

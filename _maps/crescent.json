@@ -1,0 +1,18 @@
+{
+   "map_name":"Crescent",
+   "map_path":"map_files/crescent",
+   "map_file":[
+        "main-01-surface.dmm"
+   ],
+   "traits":[
+      {
+        "Up":1,
+        "Station":true,
+        "Linkage":null,
+        "Gravity":true,
+        "Baseturf":"/turf/simulated/floor/outdoors/grass/forest",
+		"FacilityWeaponLock":true
+      }
+   ],
+   "minetype":"none"
+}

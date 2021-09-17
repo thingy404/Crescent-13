@@ -9,5 +9,5 @@
 	has_gravity = 1
 	power_equip = 0
 	power_environ = 1
-	base_turf = /turf/simulated/floor/outdoors/forest
+	base_turf = /turf/simulated/floor/outdoors/grass/forest
 	ambience = null
