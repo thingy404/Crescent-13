@@ -13,3 +13,9 @@
 
 /turf/unsimulated/wall/other
 	icon_state = "r_wall"
+
+/turf/unsimulated/wall/forest
+	name = "dense forest"
+	icon = 'icons/crescent13/turf/ground.dmi'
+	icon_state = "junglewall"
+	alpha = 255

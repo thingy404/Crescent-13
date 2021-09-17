@@ -138,6 +138,11 @@ var/list/flooring_types
 	damage_temperature = T0C+80
 	flags = TURF_HAS_EDGES | TURF_REMOVE_SHOVEL
 	build_type = /obj/item/stack/tile/grass
+	footstep_sounds = list("human" = list(
+		'sound/effects/footstep/grass1.ogg',
+		'sound/effects/footstep/grass2.ogg',
+		'sound/effects/footstep/grass3.ogg',
+		'sound/effects/footstep/grass4.ogg'))
 
 /decl/flooring/asteroid
 	name = "coarse sand"
@@ -414,6 +419,11 @@ var/list/flooring_types
 	has_damage_range = 6
 	descriptor = "cobble"
 	flags = TURF_CAN_BREAK | TURF_IS_FRAGILE |TURF_ACID_IMMUNE|TURF_HAS_CORNERS|TURF_REMOVE_SHOVEL
+	footstep_sounds = list("human" = list(
+		'sound/effects/footstep/asteroid1.ogg',
+		'sound/effects/footstep/asteroid2.ogg',
+		'sound/effects/footstep/asteroid3.ogg',
+		'sound/effects/footstep/asteroid4.ogg'))
 
 /decl/flooring/stone/one
 	icon_base = "extra"
@@ -517,6 +527,34 @@ var/list/flooring_types
 		'sound/effects/footstep/grass2.ogg',
 		'sound/effects/footstep/grass3.ogg',
 		'sound/effects/footstep/grass4.ogg'))
+
+/decl/flooring/outdoors/grass/forest
+	icon = 'icons/crescent13/turf/ground.dmi'
+	icon_base = "dirt"
+
+/decl/flooring/outdoors/grass/forest/grass
+	icon_base = "grass1"
+
+/decl/flooring/outdoors/grass/forest/grass_corner
+	icon_base = "grassdirt_corner"
+
+/decl/flooring/outdoors/grass/forest/grass_corner2
+	icon_base = "grassdirt_corner2"
+
+/decl/flooring/outdoors/grass/forest/grass_edge
+	icon_base = "grassdirt_edge"
+
+/decl/flooring/outdoors/grass/forest/desert_dirt
+	icon_base = "desert_dirt"
+
+/decl/flooring/outdoors/grass/forest/corner1
+	icon_base = "grasscorner1"
+
+/decl/flooring/outdoors/grass/forest/corner2
+	icon_base = "grasscorner2"
+
+/decl/flooring/outdoors/grass/forest/edge
+	icon_base = "grassedge"
 
 /decl/flooring/outdoors/grass/sif
 	name = "growth"

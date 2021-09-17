@@ -431,3 +431,7 @@ turf/simulated/floor/water/contaminated/Entered(atom/movable/AM, atom/oldloc)
 	edge_blending_priority = -2
 	movement_cost = 8
 	depth = 7
+
+/turf/simulated/floor/water/river_water
+	icon = 'icons/crescent13/turf/ground.dmi'
+	icon_state = "riverwater_motion"

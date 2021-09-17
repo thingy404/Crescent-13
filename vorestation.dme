@@ -3568,7 +3568,6 @@
 #include "maps\crescent\includes.dm"
 #include "maps\crescent\items.dm"
 #include "maps\crescent\structures.dm"
-#include "maps\crescent\turfs.dm"
 #include "maps\submaps\_healpers.dm"
 #include "maps\submaps\_readme.dm"
 #include "maps\submaps\engine_submaps_vr\tether\_engine_submaps.dm"
