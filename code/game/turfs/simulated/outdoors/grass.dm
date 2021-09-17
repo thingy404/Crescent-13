@@ -77,6 +77,7 @@ var/list/grass_types = list(
 	icon = 'icons/crescent13/turf/ground.dmi'
 	icon_state = "dirt"
 	initial_flooring = /decl/flooring/outdoors/grass/forest
+	edge_blending_priority = 0
 
 /turf/simulated/floor/outdoors/grass/forest/grass
 	icon_state = "grass1"
@@ -93,6 +94,18 @@ var/list/grass_types = list(
 /turf/simulated/floor/outdoors/grass/forest/grass_edge
 	icon_state = "grassdirt_edge"
 	initial_flooring = /decl/flooring/outdoors/grass/forest/grass_edge
+
+/turf/simulated/floor/outdoors/grass/forest/path_corner
+	icon_state = "pathcorner1"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/path_corner
+
+/turf/simulated/floor/outdoors/grass/forest/path_corner2
+	icon_state = "pathcorner2"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/path_corner2
+
+/turf/simulated/floor/outdoors/grass/forest/path_edge
+	icon_state = "pathedge"
+	initial_flooring = /decl/flooring/outdoors/grass/forest/path_edge
 
 /turf/simulated/floor/outdoors/grass/forest/desert_dirt
 	icon_state = "desert_dirt"

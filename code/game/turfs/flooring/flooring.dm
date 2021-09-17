@@ -544,6 +544,15 @@ var/list/flooring_types
 /decl/flooring/outdoors/grass/forest/grass_edge
 	icon_base = "grassdirt_edge"
 
+/decl/flooring/outdoors/grass/forest/path_corner
+	icon_base = "pathcorner1"
+
+/decl/flooring/outdoors/grass/forest/path_corner2
+	icon_base = "pathcorner2"
+
+/decl/flooring/outdoors/grass/forest/path_edge
+	icon_base = "pathedge"
+
 /decl/flooring/outdoors/grass/forest/desert_dirt
 	icon_base = "desert_dirt"
 
