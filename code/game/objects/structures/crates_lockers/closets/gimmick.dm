@@ -1,6 +1,6 @@
 /obj/structure/closet/cabinet
 	name = "cabinet"
-	desc = "Old will forever be in fashion."
+	desc = "A wooden cabinet granting plentiful storage."
 	icon_state = "cabinet_closed"
 	icon_closed = "cabinet_closed"
 	icon_opened = "cabinet_open"
