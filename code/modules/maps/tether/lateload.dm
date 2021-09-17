@@ -63,7 +63,7 @@
 
 /datum/map_template/tether_lateload/tether_plains/on_map_loaded(z)
 	. = ..()
-	seed_submaps(list(z), 150, /area/tether/outpost/exploration_plains, /datum/map_template/submap/level_specific/plains)
+	seed_submaps(list(z), 150, /datum/map_template/submap/level_specific/plains)
 
 //////////////////////////////////////////////////////////////////////////////
 //Rogue Mines Stuff

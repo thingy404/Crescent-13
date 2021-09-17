@@ -140,8 +140,6 @@
 		/turf/space,
 		/turf/simulated/floor/outdoors/grass/sif/virgo3b,
 		/turf/simulated/mineral/virgo3b, //Mountains around tether versus mountain at tether.
-		/turf/simulated/floor/maglev/virgo3b,
-		/turf/simulated/floor/tiled/techfloor/grid/virgo3b,
 		/turf/simulated/floor/virgo3b,
 		/turf/simulated/floor/tiled/steel_dirty/virgo3b,
 		/turf/simulated/open/virgo3b,
